@@ -11,10 +11,10 @@ if __name__ == "__main__":
     ops = {"+": add, "-": sub, "*": mul, "/": div}
     if sys.argv[2] in ops.items():
         a = int(argv[1])
-        operator = ops[argv[2]]
+        ops_ = ops[argv[2]]
         b = int(argv[3])
-        result = operator(a, b)
-        print("<a> <operator> <b> = <result>")
+        result = ops_(a, b)
+        print("{:d} {:s} {:d} = {:d}".format(a, ops_, b, result))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
