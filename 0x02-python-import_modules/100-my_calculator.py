@@ -9,12 +9,12 @@ if __name__ == "__main__":
         sys.exit(1)
 
     ops = {"+": add, "-": sub, "*": mul, "/": div}
-    if sys.argv[2] in ops.items():
-        a = int(argv[1])
-        ops_ = ops[argv[2]]
-        b = int(argv[3])
-        result = ops_(a, b)
-        print("{:d} {:s} {:d} = {:d}".format(a, ops_, b, result))
+    if sys.argv[2] in ops:
+        a = int(sys.argv[1])
+        op = ops[sys.argv[2]]
+        b = int(sys.argv[3])
+        result = op(a, b)
+        print("{} {} {} = {}".format(a, sys.argv[2], b, result))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
