@@ -4,4 +4,4 @@ if __name__ == "__main__":
     inf_add = 0
     for i in argv[1:]:
         inf_add += int(i)
-        print("{}".format(inf_add))
+    print("{:d}".format(inf_add))
